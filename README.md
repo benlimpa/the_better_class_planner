@@ -1,1 +1,1 @@
-# the_better_class_planner
+# The Better UCLA Class Planner
