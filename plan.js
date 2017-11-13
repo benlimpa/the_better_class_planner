@@ -1,6 +1,16 @@
 $(document).ready(function() {
   var $calendar = $("#calendar").fullCalendar(
     {
+      events: [
+        {
+            title  : 'Math',
+            start  : '2017-11-13T08:30:00'
+        },
+        {
+            title  : 'CS',
+            start  : '2017-11-15T10:30:00'
+        }
+    ],
       header: {
           left: '',
           center: '',
