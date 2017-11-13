@@ -1,0 +1,27 @@
+{
+  "name": "the_better_class_planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benlimpa/the_better_class_planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benlimpa/the_better_class_planner/issues"
+  },
+  "homepage": "https://github.com/benlimpa/the_better_class_planner#readme",
+  "dependencies": {
+    "app": "^0.1.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "request": "^2.83.0"
+  }
+}
