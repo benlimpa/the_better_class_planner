@@ -9,10 +9,12 @@ var http = require('http');
 
 app.get('/scrape', function(req, res){
 
-
-const PORT=8080; 
-
-fs.readFile('SearchResults.html', function (err, html) {
+var dict = [];
+for (int num = 0; num < 44; num++)
+{
+	var port = 8000 + num;
+	var fileName = num + '.html';
+	fs.readFile(fileName, function (err, html) {
 
     if (err) throw err;    
 
@@ -20,10 +22,10 @@ fs.readFile('SearchResults.html', function (err, html) {
         response.writeHeader(200, {"Content-Type": "text/html"});  
         response.write(html);  
         response.end();  
-    }).listen(PORT);
+    }).listen(port);
 });
   //All the web scraping magic will happen here
-  url = 'http://localhost:8080';
+  url = 'http://localhost:' + port;
   //window.open('http://www.google.com');
   
   request(url, function(error, respones, html){
@@ -34,7 +36,7 @@ fs.readFile('SearchResults.html', function (err, html) {
 		  var name, ID, professor, section;
 		  var json = { name: ""};
 		  var classNames = [];
-		  var dict = [];
+
 		  
 		  $('.class-title').each(function(){
 			  var data = $(this);
@@ -53,14 +55,17 @@ fs.readFile('SearchResults.html', function (err, html) {
 			  dict.push({classname : name, ids : sectionIDs});
 		  })
 	  }
-	  fs.writeFile('output.json', JSON.stringify(dict, null, 4), function(err){
+	  
+  
+  
+  })
+  fs.writeFile('output.json', JSON.stringify(dict, null, 4), function(err){
 	  console.log('File successfully written! - Check directory for output.json file');
   })
-  
   res.send('Check your console!')
-  })
   
-  
+}
+
 
 })
 
