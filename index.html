@@ -9,6 +9,7 @@
   <script src='fullcalendar/lib/jquery.min.js'></script>
   <script src='fullcalendar/lib/moment.min.js'></script>
   <script src='fullcalendar/fullcalendar.js'></script>
+  <script src='./buttonHandler.js'></script>
   <link rel = "stylesheet" href ="./style.css" />
 </head>
 <body>
@@ -29,8 +30,9 @@
       <h1>Planner</h1>
       <p>Find your class!</p>
       <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li><button type="button" class="button">Search</button></li>
+        <li><input type="search" id="search_text" placeholder="Search"></li>
+        <li><button type="button" id="search_btn" onclick="handleBtn()" class="button">Search</button></li>
+        <li><p id="output_cl"></p></li>
       </ul>
 	  <p>Make a new event block!</p>
       <ul class="menu">

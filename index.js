@@ -12,9 +12,13 @@ function writeFile(input) {
 // Serve webpage
 app.use(express.static(__dirname));
 
-app.get('/scrape', function(req, res){
+// app.use(express.bodyParser());
+
+app.get('/scrape/:id', function(req, res){
+    let classId = req.params.id;
+    console.log(classId);
   // Let's scrape the UCLA Page
-  url = 'https://sa.ucla.edu/ro/Public/SOC/Results?t=18W&sBy=classidnumber&id=102108200';
+  url = 'https://sa.ucla.edu/ro/Public/SOC/Results?t=18W&sBy=classidnumber&id=' + classId;
 
   request(url, function(error, response, html){
     if(!error){
