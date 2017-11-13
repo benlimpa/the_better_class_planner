@@ -10,6 +10,7 @@
   <script src='fullcalendar/lib/moment.min.js'></script>
   <script src='fullcalendar/fullcalendar.js'></script>
   <script src='./buttonHandler.js'></script>
+  <script src='./newEvent.js'></script>
   <link rel = "stylesheet" href ="./style.css" />
 </head>
 <body>
@@ -36,9 +37,9 @@
       </ul>
 	  <p>Make a new event block!</p>
       <ul class="menu">
-        <li><input type="input" placeholder="Event name"></li>
+        <li><input type="input" id="eventName" placeholder="Event name"></li>
 		<li>
-		<select name="Day">
+		<select id="Day">
 
 
 			  <option value="2017-11-13">Monday</option>
@@ -48,9 +49,11 @@
 			  <option value="2017-11-17">Friday</option>
 			</select>  
 		</li> <!-- Turn into a drop-down menu???-->
-		<li><input type="input" placeholder="Start time"></li>
-		<li><input type="input" placeholder="End time"></li>
-        <li><button type="button" class="button">Create</button></li>
+		<li><input id = "start" type="input" placeholder="Start time"></li>
+		<li><input id = "end" type="input" placeholder="End time"></li>
+        <li><button type="button" class="button" 
+				onclick="addEvent()">
+				Create</button></li>
       </ul>
       <div id="calendar"></div>
     </div>
