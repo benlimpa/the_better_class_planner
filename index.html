@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title> The Better Class Planner </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+  <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+  <script src='fullcalendar/lib/jquery.min.js'></script>
+  <script src='fullcalendar/lib/moment.min.js'></script>
+  <script src='fullcalendar/fullcalendar.js'></script>
+  <link rel = "stylesheet" href ="./style.css" />
+</head>
+<body>
+  <div class="title-bar">
+    <div class="title-bar-left">
+      <span class="title-bar-title">The Better Class Planner</span>
+    </div>
+    <div class="title-bar-right">
+      <ul class="menu">
+        <li><a href="#planner">Class Planner</a></li>
+        <li><a href="#finals">Finals</a></li>
+        <li><a href="#map">Map</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+    <div class = "planner" id = "planner">
+      <h1>Planner</h1>
+      <div id="calendar"></div>
+    </div>
+    <div class = "finals" id = "finals">
+      <h1>Finals</h1>
+      <div id="calendarf"></div>
+    </div>
+
+    <h1>Map</h1>
+    <div class = "map" id = "map">
+      <script>
+        function initMap() {
+          var uluru = {lat: 34.0649541, lng: -118.4578944};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZzJkiEjQeJmx46ofZkEmDwV3Wa5PEi7s&callback=initMap">
+      </script>
+  </div>
+  <footer>
+    <p>  </p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+  <script src="plan.js"></script>
+  <script src="final.js"></script>
+</body>
+</html>

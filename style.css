@@ -1,0 +1,21 @@
+.title-bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.main {
+  margin-top: 60px;
+}
+
+#map {
+  margin-top: 60px;
+  height: 400px;
+  width: 100%;
+}
