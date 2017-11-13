@@ -1,6 +1,17 @@
 $(document).ready(function() {
   var $calendarf = $("#calendarf").fullCalendar(
     {
+      defaultTimedEventDuration: '05:00:00',
+      events: [
+        {
+            title  : 'Math Final',
+            start  : '2017-11-13T08:30:00'
+        },
+        {
+            title  : 'CS Final',
+            start  : '2017-11-15T10:30:00'
+        }
+    ],
       header: {
           left: '',
           center: '',
