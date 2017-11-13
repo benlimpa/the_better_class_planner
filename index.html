@@ -3,6 +3,7 @@
 <head>
   <meta charset = "utf-8">
   <title> The Better Class Planner </title>
+  <link rel="icon" type="image/png" href="./bear.png"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
   <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
   <script src='fullcalendar/lib/jquery.min.js'></script>
@@ -26,6 +27,20 @@
   <div class="main">
     <div class = "planner" id = "planner">
       <h1>Planner</h1>
+      <div class="row">
+        <div class="columns">
+          <form>
+            <label>Pick a class:
+              <select>
+                <option value="Math">Math</option>
+                <option value="Some GE">Some GE</option>
+                <option value="CS 35L">CS 35L</option>
+                <option value="Physics">Physics</option>
+              </select>
+            </label>
+          </form>
+        </div>
+      </div>
       <div id="calendar"></div>
     </div>
     <div class = "finals" id = "finals">
@@ -37,13 +52,29 @@
     <div class = "map" id = "map">
       <script>
         function initMap() {
-          var uluru = {lat: 34.0649541, lng: -118.4578944};
+          var uluru = {lat: 34.0698364, lng: -118.4473698};
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 16,
             center: uluru
           });
           var marker = new google.maps.Marker({
-            position: uluru,
+            position: {lat: 34.0728761, lng: -118.4413637},
+            map: map
+          });
+          var marker = new google.maps.Marker({
+            position: {lat: 34.0691385, lng: -118.4431361},
+            map: map
+          });
+          var marker = new google.maps.Marker({
+            position: {lat: 34.071454, lng: -118.4415271},
+            map: map
+          });
+          var marker = new google.maps.Marker({
+            position: {lat: 34.0696392, lng: -118.4413578},
+            map: map
+          });
+          var marker = new google.maps.Marker({
+            position: {lat: 34.073189, lng: -118.4523775},
             map: map
           });
         }
